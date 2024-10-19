@@ -124,11 +124,6 @@ function simulationRun() {
 
         node.exit().remove();
 
-        if (nodes.length === root.descendants().length) {
-            lastNodeTime = performance.now(); // Memorizza l'istante in cui si inserisce l'ultimo nodo
-            const executionTime = (lastNodeTime - startTime) / 1000;
-            console.log(`Tempo totale di esecuzione fino all'ultimo nodo: ${executionTime.toFixed(3)} secondi`);
-        }
     }
 
     // Aggiungi ricorsivamente i nodi e i link alla simulazione con un ritardo specificato
@@ -226,7 +221,5 @@ scrollableDiv.scrollTop = halfContentHeight;
 // Funzione per cambiare il valore di randomBool quando il bottone viene cliccato
 function toggleRandom() {
     const switchElement = document.getElementById('toggleSwitch');
-    randomBool = switchElement.checked;
-    console.log("Random mode:", randomBool);
-}
+    randomBool = switchElement.checked;}
 
